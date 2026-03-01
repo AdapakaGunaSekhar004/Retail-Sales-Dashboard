@@ -4,7 +4,9 @@ import plotly.graph_objects as go
 import pandas as pd
 
 # ── LOAD DATA ──
-df = pd.read_csv(r"C:\Users\adapa\OneDrive\Documents\Python\Online Retail Analysis\Online_Retail_Sample.csv", encoding="latin1")
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+df = pd.read_csv(os.path.join(BASE_DIR, "Online_Retail_Sample.csv"), encoding="latin1")
 df.dropna(subset=["CustomerID"], inplace=True)
 sales = df[df["IsReturn"] == False].copy()
 
