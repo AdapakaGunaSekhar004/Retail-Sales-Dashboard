@@ -35,6 +35,7 @@ PLOT_LAYOUT = dict(
 
 # ── APP ──
 app = dash.Dash(__name__)
+server = app.server
 app.title = "Retail Sales Dashboard"
 
 app.layout = html.Div(style={"backgroundColor": BG, "minHeight": "100vh", "fontFamily": "Inter, sans-serif", "color": TEXT, "paddingBottom": "2rem"}, children=[
